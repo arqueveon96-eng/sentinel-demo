@@ -1,0 +1,73 @@
+/* ============================================================
+   tokens.css — Sentinel's reconciled token set.
+
+   These are the console's own colours, declared once as CSS variables
+   for Phase 2 to consume. Phase 1 does not theme anything with them
+   beyond the scaffold shell; shadcn/ui still ships its default neutral
+   palette and gets mapped onto these in Phase 2.
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --bg: #0a0e14;
+  --panel: #161b22;
+  --panel-2: #1d242e;
+  --panel-3: #06080d;
+  --panel-hover: #242d39;
+
+  /* lines */
+  --line: #2b333d;
+  --line-2: #20272f;
+  --line-focus: #5eead4;
+
+  /* text */
+  --txt: #e6edf3;
+  --dim: #8b949e;
+  --dim-2: #8593a1;
+  --dim-hi: #a8b3bf;
+
+  /* accents */
+  --teal: #2dd4bf;
+  --teal-d: #0f766e;
+  --teal-l: #5eead4;
+  --amber: #f0a020;
+  --purple: #bc8cff;
+  --orange: #db6d28;
+  --red: #f85149;
+  --green: #3fb950;
+  --assist: #7ee787;
+}
+
+/* Severity / tier semantics, so Phase 2 never hand-picks a hex.
+   FAILING and CRITICAL are deliberately the same red: one is hardware,
+   one is composite, and the console never blends the two models — but
+   both mean "work this first". */
+:root {
+  --sev-failing: var(--red);
+  --sev-degrading: var(--orange);
+  --sev-watch: var(--amber);
+  --sev-stable: var(--dim);
+
+  --tier-critical: var(--red);
+  --tier-high: var(--orange);
+  --tier-elevated: var(--amber);
+  --tier-monitor: var(--teal-d);
+  --tier-healthy: var(--dim);
+}
+
+/* ------------------------------------------------------------
+   Phase 2 addition: the surfaces the mockups paint that Phase 1's
+   set did not name. Every value below is lifted verbatim from
+   the design mockups — nothing is invented, and
+   declaring them here means no component hand-picks a hex.
+   ------------------------------------------------------------ */
+:root {
+  --rail-bg: #0c1117;      /* the stage rail's ground */
+  --panel-quiet: #10161e;  /* a rail card that is done or not started */
+  --panel-stage: #0f2622;  /* the stage panel, and the selected queue row */
+  --on-teal: #04231f;      /* text on a solid teal fill */
+  --on-teal-d: #eafffb;    /* text on the darker teal fill */
+  --teal-text: #a8f5e6;    /* teal-tinted prose inside the stage panel */
+  --body: #c9d5e1;         /* prose on a panel, softer than --txt */
+  --placeholder: #8593a1;  /* unfilled field hint (== --dim-2, named for use) */
+}
