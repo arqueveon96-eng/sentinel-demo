@@ -1,5 +1,7 @@
 # Sentinel
 
+![Sentinel: find the failing devices before the tickets arrive](docs/img/hero.jpg)
+
 An offline, deterministic console for a weekly proactive device-health loop over endpoint
 telemetry, designed for Nexthink exports. It turns one weekly CSV into a ranked, explained work
 queue, drafts the remediation ticket, and keeps an outcome ledger so the scoring can be checked
