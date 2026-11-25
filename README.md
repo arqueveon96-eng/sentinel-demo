@@ -10,6 +10,8 @@ for a weekly device-health review on a large enterprise fleet; every organisatio
 (form fields, query scopes, naming conventions, device models) has been replaced with a neutral
 equivalent.
 
+![Sentinel score view: 46 of 295 synthetic devices queued, with severity counts and a ranked queue explaining why each device is there](docs/img/score.png)
+
 ## The problem
 
 Most service desks learn that a laptop is failing when its user calls. Endpoint analytics tools
@@ -32,6 +34,8 @@ Lenses that sit outside the loop: **Fleet** (composition and what changed since 
 **Trends** (DEX, CRS, tier movement, hidden risk, validation over committed weeks), **Reports**
 (weekly status and an executive brief, generated as plain text), **Config**, and **Export**
 (backup and restore).
+
+![Investigate view: one device with its verdict, prediction-versus-outcome panel and the evidence behind it](docs/img/investigate.png)
 
 ## Scoring design
 
